@@ -7,7 +7,7 @@ import (
 
 // readLines reads a whole file into memory
 // and returns a slice of its lines.
-func readLines(path string) ([]string, error) {
+func ReadLines(path string) ([]string, error) {
     file, err := os.Open(path)
     if err != nil {
         return nil, err
@@ -24,7 +24,7 @@ func readLines(path string) ([]string, error) {
 
 // Reading files requires checking most calls for errors.
 // This helper will streamline our error checks below.
-func check(e error) {
+func Check(e error) {
     if e != nil {
         panic(e)
     }
